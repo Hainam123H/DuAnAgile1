@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- FastFood App - Đăng ký -->
+    <color name="primary_orange">#FF6F3D</color>
+    <color name="background_beige">#F5F0E8</color>
+    <color name="text_dark">#2D2D2D</color>
+    <color name="hint_gray">#9E9E9E</color>
 </resources>

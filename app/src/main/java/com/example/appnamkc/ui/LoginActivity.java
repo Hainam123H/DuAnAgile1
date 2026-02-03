@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     if (task.isSuccessful()) {
                         Toast.makeText(this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-
+                        navigateByRole(email);
                     } else {
                         handleLoginError(task.getException());
                     }
@@ -95,7 +95,21 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
+    private void navigateByRole(String email) {
+        Intent intent;
 
+        if (email.contains("@admin")) {
+            // Tài khoản quản lý
+            intent = new Intent(this, CategoryActivity.class);
+        } else {
+            // Tài khoản người dùng thường
+            intent = new Intent(this, HomeActivity.class);
+        }
+
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
+    }
 
     private void handleLoginError(Exception exception) {
         String msg = "Email hoặc mật khẩu không đúng";

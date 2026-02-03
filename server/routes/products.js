@@ -1,7 +1,7 @@
 const express = require('express');
 
 /**
- * Routes API sản phẩm: GET/POST/PUT/DELETE /api/products
+ * Routes API sản phẩm: GET/POST/PUT/DELETE, xóa mềm/cứng, thùng rác
  * @param {object} data - { products }
  * @param {function} persist - Hàm lưu dữ liệu ra file
  */
